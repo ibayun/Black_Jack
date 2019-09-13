@@ -9,14 +9,9 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-     bot.send_message(
-        message.chat.id,
-         "Привет! Я бот игры в black jack. Нажми {start_games} "
-         "- чтобы начать игру, {rules} - чтобы узнать правила игры"
-    )
+    bot.send_message(message.chat.id, 'Привет, ты написал мне команду /start')
 
-
-@bot.message_handler(content_types=["start_games"])
+"""@bot.message_handler(content_types=["start_games"])
 def handle_answer(message):
     print(dir(message.text))
     bot.send_message(
@@ -29,7 +24,7 @@ def handle_answer(message):
     bot.send_message(
         message.chat.id, "правила:"
     )
-
+"""
 
 """@bot.message_handler(content_types=["text"])
 def handle_answer(message):
@@ -37,14 +32,13 @@ def handle_answer(message):
     bot.send_message(
         message.chat.id, message.text
     )
-"""
 
-    """
     if message.text == "Привет":
     bot.send_message(message.from_user.id, "Привет, чем я могу тебе помочь?")
     elif message.text == "/help":
     bot.send_message(message.from_user.id, "Напиши привет")else:
-    bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")"""
+    bot.send_message(message.from_user.id, "Я тебя не понимаю. Напиши /help.")
+    """
 
 
 if __name__ == "__main__":
