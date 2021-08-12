@@ -5,7 +5,7 @@ import time
 import telebot
 from telebot import types
 
-TOKEN = "925351426:AAHzTYMJXTZOxlqlohzdF-IEJKpUKyfOIuk"
+TOKEN = ""
 YOUR_CHOICE = [1]
 
 
